@@ -1,0 +1,66 @@
+.about {
+  border-bottom: 1px solid var(--line);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.text p {
+  color: #4A4A45;
+  margin-bottom: 1.1rem;
+  font-size: 0.97rem;
+}
+
+.text p:last-child {
+  margin-bottom: 0;
+}
+
+.text strong {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.skillsLabel {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.skillItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.88rem;
+  color: var(--fg);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+@media (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

@@ -1,0 +1,60 @@
+.contact {
+  /* no border needed at bottom, footer handles it */
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  font-weight: 400;
+  max-width: 400px;
+}
+
+.heading em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: flex-end;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--fg);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.linkItem:hover {
+  color: var(--accent);
+}
+
+.ciLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  min-width: 60px;
+  text-align: right;
+}
+
+@media (max-width: 680px) {
+  .inner { flex-direction: column; align-items: flex-start; }
+  .linksList { align-items: flex-start; }
+  .ciLabel { text-align: left; }
+}
